@@ -5,7 +5,7 @@ TARGET_SCREEN_WIDTH  := 480
 # Include GSM stuff
 $(call inherit-product, vendor/cm/config/gsm.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/htc/pico/overlay
+DEVICE_PACKAGE_OVERLAYS += device/htc/golfu/overlay
 
 # Inherit some common cyanogenmod stuff.
 $(call inherit-product, vendor/cm/config/common_mini_phone.mk)
