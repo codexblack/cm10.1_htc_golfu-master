@@ -20,6 +20,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/golfu/overlay
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    brcm_patchram_plus
+
 # Video decoding
 PRODUCT_PACKAGES += \
     libmm-omxcore \
@@ -55,6 +59,22 @@ PRODUCT_PACKAGES += \
    
 # Camera
 PRODUCT_PACKAGES += \
+<<<<<<< HEAD
+=======
+    camera.default \
+    libsurfaceflinger_client
+    
+# Other
+PRODUCT_PACKAGES += \
+    dexpreopt \
+    lights.golfu \
+    sensors.msm7x27a \
+    gps.golfu \
+    power.msm7x27a
+   
+# Camera
+PRODUCT_PACKAGES += \
+>>>>>>> e05cf5eb1a56dfee27365f8c37f4520e006caf5a
     camera.default
 
 # NFC
@@ -69,7 +89,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
-# Hardware properties 
+# Hardware properties
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
@@ -154,7 +174,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/golfu/proprietary/lib/drm/libdrmwvmplugin.so:system/lib/drm/libdrmwvmplugin.so
 
+<<<<<<< HEAD
 # Wifi
+=======
+# Wii
+>>>>>>> e05cf5eb1a56dfee27365f8c37f4520e006caf5a
 PRODUCT_COPY_FILES += \
     device/htc/golfu/proprietary/etc/firmware/ath6k:system/etc/firmware/ath6k \
     device/htc/golfu/proprietary/etc/firmware/ath6k/AR6003:system/etc/firmware/ath6k/AR6003 \
@@ -258,7 +282,11 @@ PRODUCT_COPY_FILES += \
     device/htc/golfu/proprietary/bin/zimmer:system/bin/zimmer \
     device/htc/golfu/proprietary/bin/ath6kl-fwlog-record:system/bin/ath6kl-fwlog-record \
     device/htc/golfu/proprietary/bin/athtestcmd:system/bin/athtestcmd \
+<<<<<<< HEAD
     device/htc/golfu/proprietary/xbin/wireless_modem:system/xbin/wireless_modem 
+=======
+    device/htc/golfu/proprietary/xbin/wireless_modem:system/xbin/wireless_modem
+>>>>>>> e05cf5eb1a56dfee27365f8c37f4520e006caf5a
     
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
